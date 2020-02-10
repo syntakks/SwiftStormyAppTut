@@ -34,14 +34,14 @@ struct CurrentWeatherViewModel {
         switch model.icon {
         case "clear-day": iconImage = #imageLiteral(resourceName: "clear-day")
         case "clear-night": iconImage = #imageLiteral(resourceName: "clear-night.png")
-        case "cloudy": iconImage = #imageLiteral(resourceName: "cloudy.png")
-        case "cloudy-night": iconImage = #imageLiteral(resourceName: "cloudy-night.png")
-        case "fog": iconImage =  #imageLiteral(resourceName: "fog.png")
-        case "partly-cloudy": iconImage =  #imageLiteral(resourceName: "partly-cloudy.png")
         case "rain": iconImage = #imageLiteral(resourceName: "rain")
-        case "sleet": iconImage = #imageLiteral(resourceName: "sleet.png")
         case "snow": iconImage = #imageLiteral(resourceName: "snow.png")
+        case "sleet": iconImage = #imageLiteral(resourceName: "sleet.png")
         case "wind": iconImage = #imageLiteral(resourceName: "wind.png")
+        case "fog": iconImage =  #imageLiteral(resourceName: "fog.png")
+        case "cloudy": iconImage = #imageLiteral(resourceName: "cloudy.png")
+        case "partly-cloudy-day": iconImage =  #imageLiteral(resourceName: "partly-cloudy.png")
+        case "partly-cloudy-night": iconImage = #imageLiteral(resourceName: "cloudy-night.png")
         default:
             iconImage = #imageLiteral(resourceName: "default.png")
         }

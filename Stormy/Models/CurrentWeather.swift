@@ -7,12 +7,21 @@
 //
 
 import Foundation
-import UIKit
 
-struct CurrentWeather {
+struct CurrentWeather: Codable {
     let temperature: Double
     let humidity: Double
     let precipProbability: Double
     let summary: String
     let icon: String
+    
+    // We can create custom keys for Codable like this:
+    // Otherwise it will create the keys as the same strings as the constant names above.
+//    enum CurrentWeatherCodingKeys: String, CodingKey {
+//        case temperature = "temperature"
+//        case humidity = "humidity"
+//        case precipProbability = "precipProbability"
+//        case summary = "summary"
+//        case icon = "icon"
+//    }
 }
