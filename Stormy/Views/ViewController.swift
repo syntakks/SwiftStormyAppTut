@@ -33,12 +33,12 @@ class ViewController: UIViewController {
     
     
     func getCurrentWeather() {
-        toggleRegreshAnimation(on: true)
+        toggleRefreshAnimation(on: true)
         client.getCurrentWeather(at: Coordinate.alcatrazIsland) { [unowned self] currentWeather, error in
             if let currentWeather = currentWeather {
                 let viewModel = CurrentWeatherViewModel(model: currentWeather)
                 self.displayWeather(using: viewModel)
-                self.toggleRegreshAnimation(on: false)
+                self.toggleRefreshAnimation(on: false)
             }
         }
     }
@@ -51,7 +51,7 @@ class ViewController: UIViewController {
         currentWeatherIcon.image = viewModel.icon
     }
     
-    func toggleRegreshAnimation(on: Bool) {
+    func toggleRefreshAnimation(on: Bool) {
         refreshButton.isHidden = on
         if on {
             activityIndicator.startAnimating()
